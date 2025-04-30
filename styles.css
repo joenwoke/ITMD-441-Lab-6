@@ -75,3 +75,11 @@ button:hover {
     display: block;
     margin-bottom: 0.5rem;
 }
+
+.card {
+    background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+}
