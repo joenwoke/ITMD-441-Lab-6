@@ -27,3 +27,21 @@ header h1 {
     color: #666;
     font-size: 1.1rem;
 }
+
+.input-controls {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+  
+select,
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+}
