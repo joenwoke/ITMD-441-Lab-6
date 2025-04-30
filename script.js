@@ -36,3 +36,13 @@ locationBtn.addEventListener("click", () => {
       alert("Geolocation is not supported.");
       return;
     }
+
+    navigator.geolocation.getCurrentPosition(pos => {
+        const { latitude, longitude } = pos.coords;
+        coordsDisplay.textContent = `Latitude: ${latitude.toFixed(4)}, Longitude: ${longitude.toFixed(4)}`;
+        fetchSunData(latitude, longitude);
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        document.getElementById("todayTimezone").textContent = tz;
+        document.getElementById("tomorrowTimezone").textContent = tz;
+      }, () => alert("Unable to retrieve your location."));
+});
