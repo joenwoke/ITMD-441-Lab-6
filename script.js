@@ -61,3 +61,12 @@ function fetchSunData(lat, lng) {
       .then(data => updateDOM(data.results, "tomorrow"))
       .catch(() => alert("Failed to fetch tomorrow's data"));
   }
+
+function updateDOM(data, day) {
+    document.getElementById(`${day}Sunrise`).textContent = data.sunrise;
+    document.getElementById(`${day}Sunset`).textContent = data.sunset;
+    document.getElementById(`${day}Dawn`).textContent = data.dawn;
+    document.getElementById(`${day}Dusk`).textContent = data.dusk;
+    document.getElementById(`${day}Noon`).textContent = data.solar_noon;
+    document.getElementById(`${day}Length`).textContent = data.day_length;
+}
