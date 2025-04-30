@@ -30,3 +30,9 @@ locationSelect.addEventListener("change", () => {
     document.getElementById("todayTimezone").textContent = tz;
     document.getElementById("tomorrowTimezone").textContent = tz;
 });
+
+locationBtn.addEventListener("click", () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported.");
+      return;
+    }
