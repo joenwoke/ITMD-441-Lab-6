@@ -46,3 +46,18 @@ locationBtn.addEventListener("click", () => {
         document.getElementById("tomorrowTimezone").textContent = tz;
       }, () => alert("Unable to retrieve your location."));
 });
+
+function fetchSunData(lat, lng) {
+    const todayURL = `https://api.sunrisesunset.io/json?lat=${lat}&lng=${lng}`;
+    const tomorrowURL = `https://api.sunrisesunset.io/json?lat=${lat}&lng=${lng}&date=tomorrow`;
+  
+    fetch(todayURL)
+      .then(res => res.json())
+      .then(data => updateDOM(data.results, "today"))
+      .catch(() => alert("Failed to fetch today's data"));
+  
+    fetch(tomorrowURL)
+      .then(res => res.json())
+      .then(data => updateDOM(data.results, "tomorrow"))
+      .catch(() => alert("Failed to fetch tomorrow's data"));
+  }
