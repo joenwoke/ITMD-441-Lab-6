@@ -9,15 +9,15 @@
 	<title>SunSet Dashboard</title>
 </head>
 	<body>
-		<div>
+		<div class="app-wrapper">
       <header>
         <h1>Sun Tracker</h1>
-        <p>Sunrise, Sunset, and Solar Stats</p>
-        <div>
-          <select></select>
-          <button>Use My Location</button>
+        <p class="subtitle">Sunrise, Sunset, and Solar Stats</p>
+        <div class="input-controls">
+          <select id="locationSelect"></select>
+          <button id="currentLocationBtn">Use My Location</button>
         </div>
-        <p></p>
+        <p id="coordinates"></p>
       </header>
 
       <main>
