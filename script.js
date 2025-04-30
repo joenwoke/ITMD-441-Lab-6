@@ -14,3 +14,10 @@ const cities = [
 const locationSelect = document.getElementById("locationSelect");
 const locationBtn = document.getElementById("currentLocationBtn");
 const coordsDisplay = document.getElementById("coordinates");
+
+cities.forEach(city => {
+    const option = document.createElement("option");
+    option.value = `${city.lat},${city.lng}`;
+    option.textContent = city.name;
+    locationSelect.appendChild(option);
+});
