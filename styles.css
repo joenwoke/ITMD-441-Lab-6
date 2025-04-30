@@ -69,3 +69,9 @@ button:hover {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 1rem;
 }
+
+.label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
