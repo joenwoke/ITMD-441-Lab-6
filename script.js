@@ -10,3 +10,7 @@ const cities = [
     { name: "Atlanta", lat: 33.749, lng: -84.388, tz: "America/New_York" },
     { name: "Denver", lat: 39.7392, lng: -104.9903, tz: "America/Denver" },
 ];
+
+const locationSelect = document.getElementById("locationSelect");
+const locationBtn = document.getElementById("currentLocationBtn");
+const coordsDisplay = document.getElementById("coordinates");
