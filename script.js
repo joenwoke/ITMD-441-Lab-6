@@ -5,7 +5,7 @@ const cities = [
     { name: "Miami", lat: 25.7617, lng: -80.1918, tz: "America/New_York" },
     { name: "Austin", lat: 30.2672, lng: -97.7431, tz: "America/Chicago" },
     { name: "Seattle", lat: 47.6062, lng: -122.3321, tz: "America/Los_Angeles" },
-    { name: "Boston", lat: 42.3601, lng: -71.0589, tz: "America/New_York" }
+    { name: "Boston", lat: 42.3601, lng: -71.0589, tz: "America/New_York" },
     { name: "Phoenix", lat: 33.4484, lng: -112.074, tz: "America/Phoenix" },
     { name: "Atlanta", lat: 33.749, lng: -84.388, tz: "America/New_York" },
     { name: "Denver", lat: 39.7392, lng: -104.9903, tz: "America/Denver" },
@@ -20,4 +20,13 @@ cities.forEach(city => {
     option.value = `${city.lat},${city.lng}`;
     option.textContent = city.name;
     locationSelect.appendChild(option);
+});
+
+locationSelect.addEventListener("change", () => {
+    const selectedCity = cities[locationSelect.selectedIndex];
+    const { lat, lng, tz } = selectedCity;
+    coordsDisplay.textContent = `Latitude: ${lat}, Longitude: ${lng}`;
+    fetchSunData(lat, lng);
+    document.getElementById("todayTimezone").textContent = tz;
+    document.getElementById("tomorrowTimezone").textContent = tz;
 });
