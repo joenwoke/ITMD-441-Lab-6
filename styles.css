@@ -89,4 +89,13 @@ footer {
     color: #777;
     margin-top: 2rem;
     text-align: center;
-  }
+}
+
+footer a {
+    color: #d9e1e6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
