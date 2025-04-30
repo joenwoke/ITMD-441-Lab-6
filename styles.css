@@ -5,4 +5,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
     color: #333;
-  }  
+}
+
+.app-wrapper {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem;
+  }
